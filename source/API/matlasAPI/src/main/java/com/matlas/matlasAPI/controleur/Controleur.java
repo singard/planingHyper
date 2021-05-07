@@ -7,17 +7,35 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.matlas.matlasAPI.classe.Classe;
 import com.matlas.matlasAPI.classe.Matiere;
-import com.matlas.matlasAPI.classe.Repository;
+import com.matlas.matlasAPI.classe.Role;
+import com.matlas.matlasAPI.repositorys.ClasseRepository;
+import com.matlas.matlasAPI.repositorys.MatiereRepository;
+import com.matlas.matlasAPI.repositorys.RoleRepository;
 
 @RestController
 public class Controleur {
 	@Autowired
-	Repository repo;
+	MatiereRepository repoMatiere;
+	@Autowired
+	RoleRepository repoRole;
+	@Autowired
+	ClasseRepository repoClasse;
 	
 	@GetMapping(value="/matlas/matieres", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Matiere listMatiere() {		 
-        return repo.findById(1);
+    public List<Matiere> listMatiere() {		 
+        return repoMatiere.findAll();
+    }
+	
+	@GetMapping(value="/matlas/role", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Role> listRole() {		 
+        return repoRole.findAll();
+    }
+	
+	@GetMapping(value="/matlas/classe", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Classe> listClasse() {		 
+        return repoClasse.findAll();
     }
 	
 	@GetMapping(value="/matlas/test", produces = MediaType.APPLICATION_JSON_VALUE)
