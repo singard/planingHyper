@@ -8,5 +8,6 @@ avoir un docker fonctionnel
 avoir un java 11 pour executé les .jar du projet
 
 ## BDD
-utiliser la commande docker pour télécharger l'image de la bdd et la moté dans un contener docker
+utiliser la commande docker pour télécharger l'image de la bdd et la moté dans un contener docker.
+
 docker compose up -d 
