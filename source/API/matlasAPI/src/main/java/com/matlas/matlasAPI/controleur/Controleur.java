@@ -24,7 +24,6 @@ public class Controleur {
 	RoleRepository repoRole;
 	@Autowired
 	ClasseRepository repoClasse;
-	
 	@Autowired
 	UserRepository userClasse;
 	
@@ -32,7 +31,7 @@ public class Controleur {
 	
 	@GetMapping(value="/matlas/matieres", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Matiere> listMatiere() {		 
-        return repoMatiere.findAll();
+        return repoMatiere.findAll(); 
     }
 	
 	@GetMapping(value="/matlas/role", produces = MediaType.APPLICATION_JSON_VALUE)

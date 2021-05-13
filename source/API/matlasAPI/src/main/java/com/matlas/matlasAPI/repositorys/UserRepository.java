@@ -9,6 +9,7 @@ import com.matlas.matlasAPI.classe.User;
 public interface UserRepository extends JpaRepository<User,Integer>{
 	
     User findById(int id);
+//    User findByPseudo(String pseudo);
     List<User> findAll();
    
 
