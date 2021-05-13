@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import static org.asciidoctor.Asciidoctor.Factory.create;
 import static org.asciidoctor.OptionsBuilder.options;
+import static org.asciidoctor.AttributesBuilder.attributes;
 import org.asciidoctor.Asciidoctor;
 
 public class Main {
@@ -16,13 +17,17 @@ public class Main {
 		System.out.println("hello World !");
 		Asciidoctor asciidoctor = create();
 		
+		Map<String, Object> attributes = attributes().backend("docbook") 
+                .asMap();
 		
 		Map<String, Object> options = options()
 				  .inPlace(true)
+				  .attributes(attributes)
 				  .backend("pdf")
 				  .asMap();
 
 				String outfile = asciidoctor.convertFile(new File("src\\main\\resources\\matlasPla.adoc"), options);
+				
 		
 
 	}
