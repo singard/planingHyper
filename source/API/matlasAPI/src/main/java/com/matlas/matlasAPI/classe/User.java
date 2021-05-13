@@ -34,7 +34,8 @@ public class User {
 	private int id;
 	private String nom;
 	private String prenom;
-	private String telephone; 
+	private String pseudo;
+	private String telephone;
 	private String role;
 	
 	
