@@ -24,7 +24,15 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		System.out.println("hello World !");
+		createFile();
 		
+
+	}
+	public static void createPlanning() {
+		
+	}
+	
+	public static void createFile() {
 		Map<String, Object> model = new HashMap<>();
 		model.put("major", "test");
 		
@@ -59,9 +67,8 @@ public class Main {
 				File filefinal = new File(new File("target"),"matlass.pdf");
 				
 		System.out.println("document généré");
-
+		
 	}
-	
 	
 
 }
