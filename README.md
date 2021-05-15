@@ -11,3 +11,8 @@ avoir un java 11 pour executé les .jar du projet
 utiliser la commande docker pour télécharger l'image de la bdd et la moté dans un contener docker.
 
 docker compose up -d 
+mise a disposition du fichier .sql pour monté la base
+
+## prototype et api 
+sont tout les deux des projet java avec leur exécutable dans le dossier target des projet respectif
+(projet maven -> mvn clean install a la racine du projet)
