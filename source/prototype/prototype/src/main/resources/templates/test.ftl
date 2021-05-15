@@ -6,8 +6,18 @@ tableau : +
 
 <#list planning as plage>
 
-test ${plage?string('EEE dd.MM.yyyy')} + 
+<#if plage?string('EEE')== 'lun.'>
+nouvelle semaine +
+[grid=rows]
+|=
+|${plage?string('EEE dd.MM.yyyy')}<#else><#if plage?string('EEE')== 'dim.'>|${plage?string('EEE dd.MM.yyyy')}
 
-<#if plage?string('EEE')== 'lun.'>planning est present<#else if plage?string('EEE')== 'lun.'>when-missing</#if>
+|=
+<#else> |${plage?string('EEE dd.MM.yyyy')}
+</#if>
+</#if>
+
+
+
 
 </#list>
